@@ -18,25 +18,30 @@ project 1 - A Random Quote Generator
 var quotes = [
   {
     quote: 'Attitudes are more important than facts', 
-    source: 'George MacDonald'
+    source: 'George MacDonald',
+    type: ', Positivity'
   },
   {
     quote:'I will not take "But" for an answer', 
-    source:'Langston Hughes'
+    source:'Langston Hughes',
+    type: ', Literature'
   }, 
   {
     quote:'Your aspirations are your possibilities',
-    source:'Samuel Johnson'
+    source:'Samuel Johnson',
+    type: ', Mindset'
   }, 
   {
     quote:'Do unto others as you would have them do unto you',
     source:'God',
     citation: 'King James Version ',
-    year: "BC"
+    year: "BC", 
+    type: ', Biblical'
   }, 
   {
     quote:'Attitude will always define who we are in life',
-    source:'Mark A. Brennan'
+    source:'Mark A. Brennan',
+    type: ', Insight'
   }
 ];
 
@@ -76,7 +81,11 @@ if (result.citation) {
   sayMessage +="<span class='citation'>" + result.citation +"</span>"
 }
 if (result.year) {
-  sayMessage +="<span class='year'>" + result.year+ "</span>"
+  sayMessage +="<span class='year'>" + result.year + "</span>"
+}
+
+if (result.type) {
+  sayMessage +="<span class='type'>" + result.type + "</span>"
 }
   sayMessage += "</p>";
   document.getElementById('quote-box').innerHTML= sayMessage;
