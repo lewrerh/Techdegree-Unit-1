@@ -92,10 +92,16 @@ if (result.year) {
   }
   random_bg_color();
 
+  setInterval(function(){
+    printQuote();
+ }, 10000);
+
  //console.log(printQuote());
 }
 printQuote();
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+
 /***
   When the "Show another quote" button is clicked, the event listener 
   below will be triggered, and it will call, or "invoke", the `printQuote` 
