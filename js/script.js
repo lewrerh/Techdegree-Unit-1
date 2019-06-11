@@ -14,7 +14,7 @@ project 1 - A Random Quote Generator
   Add the `year` property to at least one object in the array.
   Use console.log() to log your array of quotes to the console.
 ***/
-// An array of Objects with the quote and source as properties
+// My variable was created as "quotes" and inside an array of Objects with the quote(5) and source as properties
 var quotes = [
   {
     quote: 'Attitudes are more important than facts', 
@@ -45,7 +45,7 @@ var quotes = [
   }
 ];
 
-console.log(quotes);
+console.log(quotes);    //consonle.log created to print quotes to page.
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number 
@@ -53,11 +53,11 @@ console.log(quotes);
 ***/
    // getRandomQuote function selects and returns a random quote object
 function getRandomQuote() {      
-    var quoteIndex = Math.floor(Math.random() * quotes.length);    // selects a random quote
-  return quotes[quoteIndex];
-};
+    var quoteIndex = Math.floor(Math.random() * quotes.length); 
+  return quotes[quoteIndex];  
+}                                     
 
-console.log(getRandomQuote());
+console.log(getRandomQuote());    //this console.log created to print the getRandomQuote feature to the page.
 /***
   Create the `printQuote` function to: 
    - Call the `getRandomQuote` function and assign it to a variable.
@@ -70,7 +70,7 @@ console.log(getRandomQuote());
    - Don't forget to close that final `p` tag.
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
-//printQuote function was created for the webpge to show my randomQuote
+//printQuote function was created for the webpge to show my randomQuote & if result lines created for citation, year, and type objects.
 function printQuote()
 {
 var sayMessage = "";
@@ -90,22 +90,23 @@ if (result.type) {
   sayMessage += "</p>";
   document.getElementById('quote-box').innerHTML= sayMessage;
 
-  function random_bg_color() {
+  function random_bg_color() {                                  //the funtion random bgColor created to randomly change the colors (red, green, blue assigned as x, y, z)
     var x = Math.floor(Math.random() * 256);
     var y = Math.floor(Math.random() * 256);
     var z = Math.floor(Math.random() * 256);
     var bgColor =  "rgb(" + x + "," + y + "," + z + ")";
 
-    document.body.style.background = bgColor;
+    document.body.style.background = bgColor;                 //the document body page displays the changing colors in the background created from bgColor variable.
 
   }
   random_bg_color();
-
-  setInterval(function(){
+//the setInterval is designed to change the color automatically every 10 seconds.
+  setInterval(function(){                                    
     printQuote();
  }, 10000);
 
  //console.log(printQuote());
+
 }
 printQuote();
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
